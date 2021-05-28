@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block title %}New User{% endblock %} {% block
+content %}
+<h2>Add Pet</h2>
+<form method="POST">
+  <p>Firft Name: <input name="first_name" /></p>
+  <p>Last Name: <input name="last_name" /></p>
+  <p>Photo URL: <input name="image_url" /></p>
+  <button>Create</button>
+</form>
+<input type="button" onclick="location.href='/';" value="Go Back to List" />
+
+{% endblock %}
