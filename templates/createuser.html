@@ -1,12 +1,28 @@
 {% extends 'base.html' %} {% block title %}New User{% endblock %} {% block
 content %}
-<h2>Add Pet</h2>
-<form method="POST">
-  <p>Firft Name: <input name="first_name" /></p>
-  <p>Last Name: <input name="last_name" /></p>
-  <p>Photo URL: <input name="image_url" /></p>
-  <button>Create</button>
-</form>
-<input type="button" onclick="location.href='/';" value="Go Back to List" />
-
+<div class="container m-5 p-5 bg-light border border-secondary rounded-3">
+  <h2>Add New User</h2>
+  <form method="POST">
+    <div class="mb-3">
+      <label for="firstname" class="form-label">Firft Name:</label>
+      <input id="fisrtname" class="form-control" name="first_name" />
+    </div>
+    <div class="mb-3">
+      <label for="lastname" class="form-label">Last Name:</label>
+      <input id="lastname" name="last_name" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label for="photo" class="form-label">Photo URL:</label>
+      <input id="photo" class="form-control" name="image_url" />
+    </div>
+    <button type="submit" class="btn btn-outline-dark">Create</button>
+  </form>
+  <br />
+</div>
+<input
+  type="button"
+  class="btn btn-outline-dark btn-sm ms-5"
+  onclick="location.href='/';"
+  value="Go Back to List"
+/>
 {% endblock %}
